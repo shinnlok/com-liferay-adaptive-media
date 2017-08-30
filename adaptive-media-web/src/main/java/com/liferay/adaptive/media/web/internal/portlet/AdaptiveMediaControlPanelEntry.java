@@ -30,5 +30,5 @@ import org.osgi.service.component.annotations.Component;
 	},
 	service = ControlPanelEntry.class
 )
-public class AdaptiveMediaControlPanelEntry extends
-	OmniadminControlPanelEntry {}
+public class AdaptiveMediaControlPanelEntry extends OmniadminControlPanelEntry {
+}
