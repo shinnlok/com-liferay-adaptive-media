@@ -14,7 +14,7 @@
 
 package com.liferay.adaptive.media.web.internal.portlet;
 
-import com.liferay.adaptive.media.web.constants.AdaptiveMediaPortletKeys;
+import com.liferay.adaptive.media.web.constants.AMPortletKeys;
 import com.liferay.portal.kernel.portlet.ControlPanelEntry;
 import com.liferay.portal.kernel.portlet.OmniadminControlPanelEntry;
 
@@ -25,9 +25,7 @@ import org.osgi.service.component.annotations.Component;
  */
 @Component(
 	immediate = true,
-	property = {
-		"javax.portlet.name=" + AdaptiveMediaPortletKeys.ADAPTIVE_MEDIA
-	},
+	property = {"javax.portlet.name=" + AMPortletKeys.ADAPTIVE_MEDIA},
 	service = ControlPanelEntry.class
 )
 public class AMControlPanelEntry extends OmniadminControlPanelEntry {
