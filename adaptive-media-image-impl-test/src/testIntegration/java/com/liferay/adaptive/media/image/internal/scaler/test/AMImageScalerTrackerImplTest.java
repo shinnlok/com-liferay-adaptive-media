@@ -72,7 +72,8 @@ public class AMImageScalerTrackerImplTest {
 
 		try (CaptureAppender captureAppender =
 				Log4JLoggerTestUtil.configureLog4JLogger(
-					_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL, Level.WARN)) {
+					_CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL,
+					Level.WARN)) {
 
 			_disableAMDefaultImageScaler();
 
@@ -104,7 +105,8 @@ public class AMImageScalerTrackerImplTest {
 
 		try (CaptureAppender captureAppender =
 				Log4JLoggerTestUtil.configureLog4JLogger(
-					_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL, Level.WARN)) {
+					_CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL,
+					Level.WARN)) {
 
 			_disableAMDefaultImageScaler();
 
@@ -145,7 +147,7 @@ public class AMImageScalerTrackerImplTest {
 		Registry registry = RegistryUtil.getRegistry();
 
 		AMImageScaler amDefaultImageScaler = registry.getService(
-			_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
+			_CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
 
 		Assert.assertEquals(amDefaultImageScaler, amImageScaler);
 	}
@@ -160,7 +162,7 @@ public class AMImageScalerTrackerImplTest {
 		Registry registry = RegistryUtil.getRegistry();
 
 		AMImageScaler amDefaultImageScaler = registry.getService(
-			_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
+			_CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
 
 		Assert.assertEquals(amDefaultImageScaler, amImageScaler);
 	}
@@ -184,7 +186,7 @@ public class AMImageScalerTrackerImplTest {
 			Registry registry = RegistryUtil.getRegistry();
 
 			AMImageScaler amDefaultImageScaler = registry.getService(
-				_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
+				_CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
 
 			Assert.assertEquals(amDefaultImageScaler, amImageScaler);
 		}
@@ -324,13 +326,13 @@ public class AMImageScalerTrackerImplTest {
 			ServiceComponentRuntime.class);
 
 		Object service = registry.getService(
-			_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER);
+			_CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER);
 
 		Bundle bundle = FrameworkUtil.getBundle(service.getClass());
 
 		ComponentDescriptionDTO componentDescriptionDTO =
 			serviceComponentRuntime.getComponentDescriptionDTO(
-				bundle, _ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
+				bundle, _CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
 
 		Promise<Void> voidPromise = serviceComponentRuntime.disableComponent(
 			componentDescriptionDTO);
@@ -345,13 +347,13 @@ public class AMImageScalerTrackerImplTest {
 			ServiceComponentRuntime.class);
 
 		Object service = registry.getService(
-			_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER);
+			_CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER);
 
 		Bundle bundle = FrameworkUtil.getBundle(service.getClass());
 
 		ComponentDescriptionDTO componentDescriptionDTO =
 			serviceComponentRuntime.getComponentDescriptionDTO(
-				bundle, _ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
+				bundle, _CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER);
 
 		Promise<Void> voidPromise = serviceComponentRuntime.enableComponent(
 			componentDescriptionDTO);
@@ -366,7 +368,7 @@ public class AMImageScalerTrackerImplTest {
 		Registry registry = RegistryUtil.getRegistry();
 
 		Object service = registry.getService(
-			_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER);
+			_CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER);
 
 		Bundle bundle = FrameworkUtil.getBundle(service.getClass());
 
@@ -391,13 +393,13 @@ public class AMImageScalerTrackerImplTest {
 		amImageScalerServiceRegistration.unregister();
 	}
 
-	private static final String _ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER =
+	private static final String _CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER =
 		"com.liferay.adaptive.media.image.internal.scaler.AMDefaultImageScaler";
 
-	private static final String _ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER =
+	private static final String _CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER =
 		"com.liferay.adaptive.media.image.scaler.AMImageScalerTracker";
 
-	private static final String _ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL =
+	private static final String _CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL =
 		"com.liferay.adaptive.media.image.internal.scaler." +
 			"AMImageScalerTrackerImpl";
 
