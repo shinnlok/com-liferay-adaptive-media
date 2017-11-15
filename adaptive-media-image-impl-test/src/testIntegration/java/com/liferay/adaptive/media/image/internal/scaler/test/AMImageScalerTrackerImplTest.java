@@ -393,15 +393,19 @@ public class AMImageScalerTrackerImplTest {
 		amImageScalerServiceRegistration.unregister();
 	}
 
-	private static final String _CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER =
-		"com.liferay.adaptive.media.image.internal.scaler.AMDefaultImageScaler";
+	private static final String
+		_CLASS_NAME_ADAPTIVE_MEDIA_DEFAULT_IMAGE_SCALER =
+			"com.liferay.adaptive.media.image.internal.scaler." +
+				"AMDefaultImageScaler";
 
-	private static final String _CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER =
-		"com.liferay.adaptive.media.image.scaler.AMImageScalerTracker";
+	private static final String
+		_CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER =
+			"com.liferay.adaptive.media.image.scaler.AMImageScalerTracker";
 
-	private static final String _CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL =
-		"com.liferay.adaptive.media.image.internal.scaler." +
-			"AMImageScalerTrackerImpl";
+	private static final String
+		_CLASS_NAME_ADAPTIVE_MEDIA_IMAGE_SCALER_TRACKER_IMPL =
+			"com.liferay.adaptive.media.image.internal.scaler." +
+				"AMImageScalerTrackerImpl";
 
 	@Inject
 	private AMImageScalerTracker _amImageScalerTracker;
