@@ -1,7 +1,6 @@
-FROM liferay/portal-tomcat-mysql:master-2089294ff076c896108e5cffcf0efe66b165afad
+FROM mdelapenya/liferay-portal:7-ce-ga5-tomcat-hsql
 MAINTAINER Sergio González <sergio.gonzalez@liferay.com>
 
-RUN rm $LIFERAY_HOME/osgi/modules/com.liferay.adaptive.media*.jar
 COPY *.jar $LIFERAY_HOME/osgi/modules/
 COPY supervisord-tomcat.conf /etc/supervisor/conf.d/supervisord-tomcat.conf
-COPY portal-ext.properties /liferay/portal-ext.properties
+COPY portal-ext.properties $LIFERAY_HOME/portal-ext.properties
