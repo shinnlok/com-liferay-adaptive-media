@@ -1,7 +1,7 @@
 # Liferay Adaptive Media
 
-[![Build Status](https://travis-ci.org/liferay/com-liferay-adaptive-media.svg?branch=master)](https://travis-ci.org/liferay/com-liferay-adaptive-media)
-[![Coverage Status](https://coveralls.io/repos/github/liferay/com-liferay-adaptive-media/badge.svg?branch=master)](https://coveralls.io/github/liferay/com-liferay-adaptive-media?branch=master)
+[![Build Status](https://travis-ci.org/liferay/com-liferay-adaptive-media.svg?branch=7.0.x)](https://travis-ci.org/liferay/com-liferay-adaptive-media)
+[![Coverage Status](https://coveralls.io/repos/github/liferay/com-liferay-adaptive-media/badge.svg?branch=7.0.x)](https://coveralls.io/github/liferay/com-liferay-adaptive-media?branch=7.0.x)
 
 Adaptive Media is an Application for Liferay Portal CE 7.0 and Liferay DXP, available for download from the [Liferay Marketplace](https://web.liferay.com/marketplace),  that will deliver your media content in the best format, based on the channel and device that will consume it.
 
